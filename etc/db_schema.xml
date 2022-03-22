@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="royalcybermarketplace_shippingfilter" resource="default" engine="innodb" comment="Table Shipping Restriction Rules">
+    <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Rule Id"/>
+    <column xsi:type="varchar" name="rule_name" nullable="false" length="255" comment="Rule Name"/>
+    <column xsi:type="varchar" name="rule_status" nullable="false" length="10" comment="Rule Status"/>
+    <column xsi:type="varchar" name="apply_area" nullable="true" length="50" default="0" comment="Apply for area: both, admin, frontend"/>
+    <column xsi:type="varchar" name="action" nullable="true" length="50" default="1" comment="Apply: show/hide"/>
+    <column xsi:type="timestamp" name="time_from" on_update="false" nullable="true" default="CURRENT_TIMESTAMP" comment="Time From"/>
+    <column xsi:type="timestamp" name="time_to" on_update="false" nullable="true" default="CURRENT_TIMESTAMP" comment="Time From"/>
+    <column xsi:type="mediumtext" name="conditions_serialized" nullable="true" comment="Conditions Serialized"/>
+    <column xsi:type="mediumtext" name="available_shipments" nullable="true" comment="Available Shipments"/>
+    <column xsi:type="int" name="priority" padding="11" unsigned="false" nullable="true" identity="false" default="0" comment="Priority"/>
+    <column xsi:type="timestamp" name="created_date" on_update="false" nullable="true" comment="Created Date"/>
+    <column xsi:type="timestamp" name="updated_date" on_update="false" nullable="true" comment="Updated Date"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="rule_id"/>
+    </constraint>
+  </table>
+  <table name="royalcybermarketplace_shippingfilter_store" resource="default" engine="innodb" comment="royalcybermarketplace_shippingfilter_store">
+    <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" identity="false" comment="rule_id"/>
+    <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="false" identity="false" comment="store_id"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="rule_id"/>
+      <column name="store_id"/>
+    </constraint>
+    <constraint xsi:type="foreign" referenceId="FK_927905BA6A524459C4868FCA616D0B0F" table="royalcybermarketplace_shippingfilter_store" column="rule_id" referenceTable="royalcybermarketplace_shippingfilter" referenceColumn="rule_id" onDelete="CASCADE"/>
+    <constraint xsi:type="foreign" referenceId="ROYALCYBERMARKETPLACE_SHPPFILTER_STORE_STORE_ID_STORE_STORE_ID" table="royalcybermarketplace_shippingfilter_store" column="store_id" referenceTable="store" referenceColumn="store_id" onDelete="CASCADE"/>
+    <index referenceId="ROYALCYBERMARKETPLACE_SHIPPINGFILTER_STORE_STORE_ID" indexType="btree">
+      <column name="store_id"/>
+    </index>
+  </table>
+  <table name="royalcybermarketplace_shippingfilter_customer_group" resource="default" engine="innodb" comment="royalcybermarketplace_shippingfilter_customer_group">
+    <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" identity="false" comment="rule_id"/>
+    <column xsi:type="int" name="customer_group_id" padding="10" unsigned="true" nullable="false" identity="false" comment="customer_group_id"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="rule_id"/>
+      <column name="customer_group_id"/>
+    </constraint>
+    <constraint xsi:type="foreign" referenceId="FK_AB95D3CAA10E207EAD5C6FDFC6F46D85" table="royalcybermarketplace_shippingfilter_customer_group" column="rule_id" referenceTable="royalcybermarketplace_shippingfilter" referenceColumn="rule_id" onDelete="CASCADE"/>
+    <constraint xsi:type="foreign" referenceId="FK_B0F54FF0A09B380A3A0840115960C0E3" table="royalcybermarketplace_shippingfilter_customer_group" column="customer_group_id" referenceTable="customer_group" referenceColumn="customer_group_id" onDelete="CASCADE"/>
+    <index referenceId="ROYALCYBERMARKETPLACE_SHPPFILTER_CSTR_GROUP_CSTR_GROUP_ID" indexType="btree">
+      <column name="customer_group_id"/>
+    </index>
+  </table>
+</schema>

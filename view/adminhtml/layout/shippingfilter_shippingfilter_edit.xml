@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    RoyalCyberMarketplace
+ * @copyright   Copyright (c) 2022 RoyalCyberMarketplace (https://royalcyber.com/)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" layout="admin-2columns-left">
+	<update handle="styles"/>
+	<update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="RoyalCyberMarketplace\ShippingRestriction\Block\Adminhtml\Shippingfilter\Edit" name="royalcybermarketplace_shipping_restriction_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="RoyalCyberMarketplace\ShippingRestriction\Block\Adminhtml\Shippingfilter\Edit\Tabs" name="royalcybermarketplace_shipping_restriction_edit_tabs">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

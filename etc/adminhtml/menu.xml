@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    RoyalCyberMarketplace
+ * @copyright   Copyright (c) 2022 RoyalCyberMarketplace (https://royalcyber.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="RoyalCyberMarketplace_ShippingRestriction::shipping_restriction" module="RoyalCyberMarketplace_ShippingRestriction" parent="Magento_Sales::sales" resource="RoyalCyberMarketplace_ShippingRestriction::shippingfilter" sortOrder="200" title="Shipping Restriction"/>
+        <add id="RoyalCyberMarketplace_ShippingRestriction::manage_rule" module="RoyalCyberMarketplace_ShippingRestriction" parent="RoyalCyberMarketplace_ShippingRestriction::shipping_restriction" resource="RoyalCyberMarketplace_ShippingRestriction::shippingfilter" action="shippingfilter/shippingfilter/index" sortOrder="9999" title="Manage Rule"/>
+    </menu>
+</config>

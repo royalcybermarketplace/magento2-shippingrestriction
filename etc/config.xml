@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    RoyalCyberMarketplace
+ * @copyright   Copyright (c) 2022 RoyalCyberMarketplace (https://royalcyber.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<royalcybermarketplaceshippingrestriction>
+			<general>
+				<enabled/>
+			</general>
+		</royalcybermarketplaceshippingrestriction>
+	</default>
+</config>

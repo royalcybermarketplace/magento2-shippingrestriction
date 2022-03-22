@@ -1,0 +1,49 @@
+{
+    "royalcybermarketplace_shippingfilter": {
+        "column": {
+            "rule_id": true,
+            "rule_name": true,
+            "rule_status": true,
+            "apply_area": true,
+            "action": true,
+            "time_from": true,
+            "time_to": true,
+            "conditions_serialized": true,
+            "available_shipments": true,
+            "priority": true,
+            "created_date": true,
+            "updated_date": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "royalcybermarketplace_shippingfilter_store": {
+        "column": {
+            "rule_id": true,
+            "store_id": true
+        },
+        "index": {
+            "ROYALCYBERMARKETPLACE_SHIPPINGFILTER_STORE_STORE_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_927905BA6A524459C4868FCA616D0B0F": true,
+            "ROYALCYBERMARKETPLACE_SHPPFILTER_STORE_STORE_ID_STORE_STORE_ID": true
+        }
+    },
+    "royalcybermarketplace_shippingfilter_customer_group": {
+        "column": {
+            "rule_id": true,
+            "customer_group_id": true
+        },
+        "index": {
+            "ROYALCYBERMARKETPLACE_SHPPFILTER_CSTR_GROUP_CSTR_GROUP_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_AB95D3CAA10E207EAD5C6FDFC6F46D85": true,
+            "FK_B0F54FF0A09B380A3A0840115960C0E3": true
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "royalcybermarketplace/magento2-shippingrestriction",
+    "description": "Magento 2 Shipping Restricted by customer group, customer attribute, product, category, shopping cart information, shipping info",
+    "keywords": [
+        "royalcybermarketplace",
+        "shipping restriction",
+        "shipping restriction customer group and attribute"
+    ],
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Royal Cyber",
+            "email": "saif.ali@royalcyber.com",
+            "role": "Magento 2 Solution Provider"
+        }
+    ],
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "RoyalCyberMarketplace\\ShippingRestriction\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

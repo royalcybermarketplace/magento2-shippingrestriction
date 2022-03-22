@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    RoyalCyberMarketplace
+ * @copyright   Copyright (c) 2022 RoyalCyberMarketplace (https://royalcyber.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+                <resource id="RoyalCyberMarketplace_ShipppingRestriction::shipping_restriction" sortOrder="10" title="Shipping Restriction">
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::delete" sortOrder="10" title="Delete"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::mass_delete" sortOrder="20" title="Mass Delete"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::index" sortOrder="30" title="Index"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::mass_enable" sortOrder="40" title="Mass Enable"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::mass_disable" sortOrder="50" title="Mass Disable"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::new_action" sortOrder="60" title="New Action"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::save" sortOrder="70" title="Save"/>
+                    <resource id="RoyalCyberMarketplace_ShipppingRestriction::edit" sortOrder="80" title="Edit"/>
+                </resource>
+				<resource id="Magento_Backend::stores">
+					<resource id="Magento_Backend::stores_settings">
+						<resource id="Magento_Config::config">
+							<resource id="RoyalCyberMarketplace_ShipppingRestriction::config_royalcybermarketplace_shipppingrestriction" title="ShipppingRestriction Configuration"/>
+						</resource>
+					</resource>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>
